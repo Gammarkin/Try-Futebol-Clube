@@ -10,4 +10,9 @@ router.post(
   LoginController.postLogin,
 );
 
+router.get(
+  '/validate',
+  LoginController.getLogin,
+);
+
 export default router;
