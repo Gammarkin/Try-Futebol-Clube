@@ -18,8 +18,12 @@ export default (
   const isEmailValid = validateEmail(email);
   const isPasswordValid = validatePassword(password);
 
+  if (!email || !password) {
+    return res.status(400).json({ message: 'All fields must be filled' });
+  }
+
   if (!isEmailValid || !isPasswordValid) {
-    return res.status(400).json({ message: 'Invalid entries.' });
+    return res.status(401).json({ message: 'Incorrect email or password' });
   }
 
   next();
