@@ -16,7 +16,7 @@ const postLogin = async (req:Request, res:Response) => {
   const tokenInDB = compareSync(password, user.password);
 
   if (!tokenInDB) {
-    return res.status(401).json({ message: 'Unauthorized', user });
+    return res.status(401).json({ message: 'Unauthorized' });
   }
 
   return res.status(200).json({ token });
