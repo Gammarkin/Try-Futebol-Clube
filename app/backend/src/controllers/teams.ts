@@ -10,4 +10,14 @@ const getTeams = async (
   return res.status(200).json(teams);
 };
 
-export default { getTeams };
+const getTeamById = async (
+  req: Request,
+  res: Response,
+) => {
+  const { id } = req.params;
+  const team = await Team.findById(+id);
+
+  return res.status(200).json(team);
+};
+
+export default { getTeams, getTeamById };
