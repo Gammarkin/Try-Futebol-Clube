@@ -1,8 +1,9 @@
 import { Router } from 'express';
 
-import validateMatchesBody from '../middlewares/validateMatchesBody';
 import matchController from '../controllers/matches';
 import validateJwt from '../middlewares/validateJwt';
+import validateSameTeamMatches from '../middlewares/validateSameTeamMatches';
+import validateTeamsPost from '../middlewares/validateTeamsPost';
 
 const router = Router();
 
@@ -16,7 +17,8 @@ router.patch(
 router.post(
   '/',
   validateJwt,
-  validateMatchesBody,
+  validateSameTeamMatches,
+  validateTeamsPost,
   matchController.postMatch,
 );
 
