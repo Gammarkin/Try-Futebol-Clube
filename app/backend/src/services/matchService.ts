@@ -34,4 +34,27 @@ const updateScore = async (id: number, score: Record<string, number>) =>
     { where: { id } },
   );
 
-export default { getAll, newMatch, updateInProgress, updateScore };
+const getMatchesWithQuery = async (inProgress: string) =>
+  Match.findAll({
+    where: { inProgress },
+    include: [
+      {
+        model: Team,
+        as: 'teamHome',
+        attributes: [['team_name', 'teamName']],
+      },
+      {
+        model: Team,
+        as: 'teamAway',
+        attributes: [['team_name', 'teamName']],
+      },
+    ],
+  });
+
+export default {
+  getAll,
+  newMatch,
+  updateInProgress,
+  updateScore,
+  getMatchesWithQuery,
+};

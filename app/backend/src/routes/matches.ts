@@ -7,7 +7,11 @@ import validateTeamsPost from '../middlewares/validateTeamsPost';
 
 const router = Router();
 
-router.get('/', matchController.getMatches);
+router.get(
+  '/',
+  matchController.getMatchesWithQuery,
+  matchController.getMatches,
+);
 
 router.patch(
   '/:id',
