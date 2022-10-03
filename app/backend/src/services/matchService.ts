@@ -21,4 +21,10 @@ const getAll = async () =>
 const newMatch = async (match: Imatch) =>
   Match.create(match);
 
-export default { getAll, newMatch };
+const updateInProgress = async (id: number) =>
+  Match.update(
+    { inProgress: false },
+    { where: { id } },
+  );
+
+export default { getAll, newMatch, updateInProgress };

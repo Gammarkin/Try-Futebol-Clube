@@ -7,6 +7,12 @@ import validateJwt from '../middlewares/validateJwt';
 const router = Router();
 
 router.get('/', matchController.getMatches);
+
+router.patch(
+  '/:id/finish',
+  matchController.postMatchInProgress,
+);
+
 router.post(
   '/',
   validateJwt,

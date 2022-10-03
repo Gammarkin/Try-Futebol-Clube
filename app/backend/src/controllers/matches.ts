@@ -15,4 +15,15 @@ const postMatch = async (req: Request, res: Response) => {
   return res.status(201).json(match);
 };
 
-export default { getMatches, postMatch };
+const postMatchInProgress = async (
+  req: Request,
+  res: Response,
+) => {
+  const { id } = req.params;
+
+  await matchService.updateInProgress(Number(id));
+
+  return res.status(200).json({ message: 'Finished' });
+};
+
+export default { getMatches, postMatch, postMatchInProgress };
