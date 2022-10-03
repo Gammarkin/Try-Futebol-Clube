@@ -1,3 +1,4 @@
+import Imatch from '../interfaces/Imatch';
 import Match from '../database/models/Match';
 import Team from '../database/models/Team';
 
@@ -17,4 +18,7 @@ const getAll = async () =>
     ],
   });
 
-export default { getAll };
+const newMatch = async (match: Imatch) =>
+  Match.create(match);
+
+export default { getAll, newMatch };
