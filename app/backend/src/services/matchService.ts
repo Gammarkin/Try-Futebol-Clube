@@ -27,4 +27,11 @@ const updateInProgress = async (id: number) =>
     { where: { id } },
   );
 
-export default { getAll, newMatch, updateInProgress };
+const updateScore = async (id: number, score: Record<string, number>) =>
+  Match.update(
+    { homeTeamGoals: score.homeTeamGoals,
+      awayTeamGoals: score.awayTeamGoals },
+    { where: { id } },
+  );
+
+export default { getAll, newMatch, updateInProgress, updateScore };

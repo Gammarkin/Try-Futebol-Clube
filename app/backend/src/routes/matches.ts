@@ -10,6 +10,11 @@ const router = Router();
 router.get('/', matchController.getMatches);
 
 router.patch(
+  '/:id',
+  matchController.patchMatchesGoals,
+);
+
+router.patch(
   '/:id/finish',
   matchController.postMatchInProgress,
 );

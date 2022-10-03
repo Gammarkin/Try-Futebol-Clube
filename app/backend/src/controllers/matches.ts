@@ -26,4 +26,16 @@ const postMatchInProgress = async (
   return res.status(200).json({ message: 'Finished' });
 };
 
-export default { getMatches, postMatch, postMatchInProgress };
+const patchMatchesGoals = async (
+  req: Request,
+  res: Response,
+) => {
+  const { id } = req.params;
+  const { body } = req;
+
+  await matchService.updateScore(Number(id), body);
+
+  return res.status(200).json({ message: 'Updated' });
+};
+
+export default { getMatches, postMatch, postMatchInProgress, patchMatchesGoals };
