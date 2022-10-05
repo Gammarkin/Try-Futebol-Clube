@@ -19,4 +19,47 @@
 
 ---
 
-Demo em breve!
+# como acessar localmente: 
+
+## Você vai precisar ter instalado:
+
+- ### Node
+- ### Git
+
+### Primeiramente, clone o repositório da aplicação:
+
+<pre>
+   <code>
+git clone https://github.com/Gammarkin/Try-Futebol-Clube
+   </code>
+</pre>
+
+### entre no diretório que você acabou de clonar:
+
+<pre>
+   <code>
+cd try-futebol-clube
+   </code>
+</pre>
+
+### instale as dependências
+
+<pre>
+   <code>
+npm i 
+   </code>
+</pre>
+
+### execute o comando para subir os containers
+
+<pre>
+   <code>
+npm run compose:up 
+   </code>
+</pre>
+
+### Acesse seu navegador no link
+<code>https://localhost/3000/leaderboard</code>
+-
+
+### Caso queira acessar apenas o back-end, a porta padrão é 3001.
