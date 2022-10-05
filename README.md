@@ -1,16 +1,22 @@
-# 🚧 README em construção 🚧
+# Try Futebol Clube
 
-<!-- Olá, Tryber!
+## Este projeto foi desenvolvido com o objetivo de integrar o front-end de uma aplicação já desenvolvida com o back-end, através de um banco de dados mysql. Também foi utilizado o ORM Sequelize para a modelagem do banco de dados.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+---
 
-É essencial que você preencha esse documento por conta própria, ok?
+### O desafio foi dockerizar aplicações front-end, e fazer a aplicação back-end completa. Desde o docker, até a montagem do banco de dados, e testes. 
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+## Stack utilizadas: 
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+- ### Node
+- ### MySql
+- ### Docker
+- ### Express
+- ### Sequelize
+- ### Chai
+- ### Mocha
+- ### Sinon
 
--->
+---
+
+Demo em breve!
