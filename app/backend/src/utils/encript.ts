@@ -1,6 +1,7 @@
 import { SignOptions, sign } from 'jsonwebtoken';
+import 'dotenv/config';
 
-const { JWT_SECRET } = process.env;
+const { JWT_SECRET = 'jwt_secret' } = process.env;
 
 const JWT_OPTIONS: SignOptions = {
   algorithm: 'HS256',
