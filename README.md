@@ -21,11 +21,6 @@
 
 # como acessar localmente: 
 
-## Você vai precisar ter instalado:
-
-- ### Node
-- ### Git
-
 ### Primeiramente, clone o repositório da aplicação:
 
 <pre>
@@ -38,7 +33,7 @@ git clone https://github.com/Gammarkin/Try-Futebol-Clube
 
 <pre>
    <code>
-cd try-futebol-clube
+cd Try-Futebol-Clube
    </code>
 </pre>
 
